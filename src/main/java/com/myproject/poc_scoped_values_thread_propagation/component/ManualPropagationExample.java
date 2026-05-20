@@ -41,4 +41,11 @@ public class ManualPropagationExample {
 
         ContextLogger.info("ManualPropagationExamples Ended");
     }
+
+    /* Saida:
+        [userId=icaro] [correlationId=e8bf1d51-382d-4df2-b893-7fdd155c87d4] [thread=Thread[#3,main,5,main]] ManualPropagationExamples started
+        [userId=icaro] [correlationId=e8bf1d51-382d-4df2-b893-7fdd155c87d4] [thread=Thread[#3,main,5,main]] ManualPropagationExamples started2
+        [userId=icaro] [correlationId=e8bf1d51-382d-4df2-b893-7fdd155c87d4] [thread=Thread[#37,ForkJoinPool.commonPool-worker-1,5,InnocuousForkJoinWorkerThreadGroup]] Async propagated task
+        [userId=icaro] [correlationId=e8bf1d51-382d-4df2-b893-7fdd155c87d4] [thread=Thread[#3,main,5,main]] ManualPropagationExamples Ended
+     */
 }
