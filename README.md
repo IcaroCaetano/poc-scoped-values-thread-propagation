@@ -10,7 +10,7 @@ With this feature, it is possible to execute an asynchronous block in another th
 - By default, it uses a global thread pool shared by the JVM `ForkJoinPool.commonPool()`
 - Another point is that `.runAsync` executes a `Runnable`, meaning it executes a statement that has no return value.
 
-In summary:
+#### In summary:
   - creates an asynchronous task
   - sends it to a thread pool
   - immediately returns a `CompletableFuture<Void>`
@@ -20,8 +20,17 @@ In summary:
 Create a concurrency scope. With this feature, it's possible to control the lifecycle of an instruction. 
 The goal is to manage concurrent tasks in a structured and secure way.
 
-In summary:
+#### In summary:
 - creates a scope of competition
 - allows you to start child tasks within it.
 - wait for all to finish with `join()`
 - It automatically closes the scope when exiting the try block.
+
+
+#### Without Structured Concurrency:
+
+Problems:
+- Complicated cancellation process, 
+- scattered exceptions, 
+- difficult to know who owns what, 
+- disorganized lifecycle.
