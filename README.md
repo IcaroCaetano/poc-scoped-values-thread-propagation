@@ -11,6 +11,6 @@ With this feature, it is possible to execute an asynchronous block in another th
 - Another point is that `.runAsync` executes a `Runnable`, meaning it executes a statement that has no return value.
 
 In summary:
-    - creates an asynchronous task
-    - sends it to a thread pool
-    - immediately returns a CompletableFuture<Void>
+  - creates an asynchronous task
+  - sends it to a thread pool
+  - immediately returns a `CompletableFuture<Void>`
